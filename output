@@ -1,0 +1,116 @@
+Goroutine profile for myFunction 1:
+Goroutine profile for myFunction 2:
+Goroutine profile for myFunction 3:
+goroutine profile: total 4
+1 @ 0x104917e4c 0x1049462e4 0x1049924f4 0x104992310 0x10498f950 0x10499a6ec 0x10494b284
+goroutine profile: total 4
+1 @ 0x104917e4c 0x1049462e4 0x1049924f4 0x104992310 0x10498f950 0x10499a6ec 0x10494b284
+#       0x1049462e3     runtime/pprof.runtime_goroutineProfileWithLabels+0x23   /usr/local/go/src/runtime/mprof.go:846
+#       0x1049924f3     runtime/pprof.writeRuntimeProfile+0xb3                  /usr/local/go/src/runtime/pprof/pprof.go:723
+#       0x10499230f     runtime/pprof.writeGoroutine+0x4f                       /usr/local/go/src/runtime/pprof/pprof.go:683
+#       0x10498f94f     runtime/pprof.(*Profile).WriteTo+0x14f                  /usr/local/go/src/runtime/pprof/pprof.go:330
+#goroutine profile: total 4
+1 @ 0x104917e4c 0x1049462e4 0x1049924f4 0x104992310 0x10498f950 0x10499a6ec 0x10494b284
+#       0x1049462e3     runtime/pprof.runtime_goroutineProfileWithLabels+0x23   /usr/local/go/src/runtime/mprof.go:846
+#       0x1049924f3     runtime/pprof.writeRuntimeProfile+0xb3                          #       0x1049462e3     runtime/pprof.runtime_goroutineProfileWithLabels+0x23       /usr/local/go/src/runtime/mprof.go:846
+#       0x1049924f3     runtime/pprof.writeRuntimeProfile+0xb3                  /usr/local/go/src/runtime/pprof/pprof.go:723
+#       0x10499230f     runtime/pprof.writeGoroutine+0x4f                       /usr/local/go/src/runtime/pprof/pprof.go:683
+#       0x10498f94f     runtime/pprof.(*Profile).WriteTo+0x14f                  /usr/local/go/src/runtime/pprof/pprof.go:330
+#       0x10499a6eb0x10499a6eb  main.myFunction+0x9b                                    /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:16
+
+/usr/local/go/src/runtime/pprof/pprof.go:723
+#               main.myFunction+0x9b                                    /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:16
+
+1 @ 0x1049216c4 0x104930efc 0x104930ed9 0x104917f5c 0x104917f45 0x104917e4c 0x1049462e4 0x104992494 0x104992310 0x10498f950 0x10499a6ec 0x10494b284
+0x10499230f     runtime/pprof.writeGoroutine+0x4f1 @ 0x1049216c4 0x104930efc 0x104930ed9 0x104947668 0x104974610 0x1049754d8 0x1049754e9 0x104976660 0x104976655 0x10497b134 0x10499a6cc 0x10499a681 0x10494b284
+                        /usr/local/go/src/runtime/pprof/pprof.go:683
+#       0x10498f94f     runtime/pprof.(*Profile).WriteTo+0x14f                  /usr/local/go/src/runtime/pprof/pprof.go:330
+#       0x10499a6eb     main.myFunction+0x9b                                    /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:16
+
+1 @ 0x1049216c4 0x104948068 0x10499a778 0x1049212fc 0x10494b284
+#       0x104948067     #       0x1049462e3     runtime/pprof.runtime_goroutineProfileWithLabels+0x23   /usr/local/go/src/runtime/mprof.go:846
+#       0x104992493     runtime/pprof.writeRuntimeProfile+0x53time.Sleep+0x117  /usr/local/go/src/runtime/time.go:195
+#                               /usr/local/go/src/runtime/pprof/pprof.go:716
+#       0x10499230f     runtime/pprof.writeGoroutine+0x4f                       /usr/local/go/src/runtime/pprof/pprof.go:683
+#       0x10498f94f#    0x104947667     internal/poll.runtime_Semacquire+0x27   /usr/local/go/src/runtime/sema.go:67
+#       0x10497460f     internal/poll.(*fdMutex).rwlock+0xdf    /usr/local/go/src/internal/poll/fd_mutex.go:154
+#       0x1049754d7     internal/poll.(*FD).writeLock+0x47      /usr/local/go/src/internal/poll/fd_mutex.go:239
+#       runtime/pprof.(*Profile).WriteTo+0x14f                  /usr/local/go/src/runtime/pprof/pprof.go:330
+#       0x10499a6eb     main.myFunction+0x9b                                    /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:16
+
+0x10499a777     main.main+0x67          /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:28
+#       0x1049212fb     runtime.main+0x24b      /usr/local/go/src/runtime/proc.go:250
+
+1 @ 0x10493ae34 0x1049392f8 0x104990bd8 0x104990630 0x1049925a0 0x104992310 0x10498f950 0x10499a6ec 0x10494b284
+        0x1049754e8     internal/poll.(*FD).Write+0x58          /usr/local/go/src/internal/poll/fd_unix.go:370# 0x104990bd7runtime/pprof.printStackRecord+0xe7      /usr/local/go/src/runtime/pprof/pprof.go:495
+#       0x10499062f     runtime/pprof.printCountProfile+0x68f   /usr/local/go/src/runtime/pprof/pprof.go:439
+#       0x10499259f     runtime/pprof.writeRuntimeProfile+0x15f 1 @ 0x1049216c4 0x104948068 0x10499a778 0x1049212fc 0x10494b284
+#       0x104948067     time.Sleep+0x117        /usr/local/go/src/runtime/time.go:195
+#       0x10499a777     main.main+0x67          /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:28
+#       0x1049212fb     runtime.main+0x24b      /usr/local/go/src/runtime/proc.go:250
+
+/usr/local/go/src/runtime/pprof/pprof.go:731
+#       0x10499230f     runtime/pprof.writeGoroutine+0x4f       /usr/local/go/src/runtime/pprof/pprof.go:6831 @ 0x104947cd4 0x104968b78 0x10497573c 0x104975729 0x1049754b5 0x104976660 0x104976655 0x1049855e0 0x1049858ec 0x104985d3c 0x104986274 0x1049865f4 0x10497b134 0x10499031c 0x1049925a0 0x104992310 0x10498f950 0x10499a6ec 0x10494b284
+
+#       0x10498f94f     runtime/pprof.(*Profile).WriteTo+0x14f  /usr/local/go/src/runtime/pprof/pprof.go:330
+#       0x10499a6eb     main.myFunction+0x9b                    /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:16
+
+1 @ 0x10499066c 0x1049925a0 0x104992310 0x10498f950 0x10499a6ec 0x10494b284
+#       0x104947cd3     syscall.syscall+0x53                            /usr/local/go/src/runtime/sys_darwin.go:23
+#       0x104968b77     syscall.write+0x47                              /usr/local/go/src/syscall/zsyscall_darwin_arm64.go:1653
+#       0x10497573b     syscall.Write+0x2ab                             /usr/local/go/src/syscall/syscall_unix.go:211
+#       0x104975728     internal/poll.ignoringEINTRIO+0x298             /usr/local/go/src/internal/poll/fd_unix.go:794
+#       0x1049754b4     internal/poll.(*FD).Write+0x24                  /usr/local/go/src/internal/poll/fd_unix.go:383
+#       0x10497665f     os.(*File).write+0x5f                           /usr/local/go/src/os/file_posix.go:48
+#       0x104976654     os.(*File).Write+0x54                           /usr/local/go/src/os/file.go:176
+#       0x1049855df     text/tabwriter.(*Writer).write0+0x2f            /usr/local/go/src/text/tabwriter/tabwriter.go:251
+#       0x1049858eb     text/tabwriter.(*Writer).writeLines+0xcb        /usr/local/go/src/text/tabwriter/tabwriter.go:336
+#       0x104985d3b     text/tabwriter.(*Writer).format+0x19b           /usr/local/go/src/text/tabwriter/tabwriter.go:405
+#       0x104986273     text/tabwriter.(*Writer).flushNoDefers+0x123
+#       0x10497665f     os.(*File).write+0x5f                   /usr/local/go/src/os/file_posix.go:48
+#       0x104976654     os.(*File).Write+0x54                   /usr/local/go/src/os/file.go:176
+#       0x10497b133     fmt.Fprintf+0x83                        /usr/local/go/src/fmt/print.go:205
+#       0x10499a6cb     fmt.Printf+0x7b                         /usr/local/go/src/fmt/print.go:213
+#       /usr/local/go/src/text/tabwriter/tabwriter.go:513
+#       0x1049865f3     text/tabwriter.(*Writer).Write+0x343            /usr/local/go/src/text/tabwriter/tabwriter.go:546
+#       0x10497b133     fmt.Fprintf+0x83                                /usr/local/go/src/fmt/print.go:205
+#       0x10499031b#    0x10499066b     runtime/pprof.printCountProfile+0x6cb   /usr/local/go/src/runtime/pprof/pprof.go:403
+#       0x10499259f     runtime/pprof.writeRuntimeProfile+0x15f /usr/local/go/src/runtime/pprof/pprof.go:731
+#       0x10499230f     runtime/pprof.writeGoroutine+0x4f       /usr/local/go/src/runtime/pprof/pprof.go:683
+#       0x10498f94f     runtime/pprof.(*Profile).WriteTo+0x14f  /usr/local/go/src/runtime/pprof/pprof.go:330
+#       0x10499a6eb     main.myFunction+0x9b                    /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:16
+
+0x10499a680     main.myFunction+0x30                            runtime/pprof.printCountProfile+0x37b           /usr/local/go/src/runtime/pprof/pprof.go:436
+#       0x10499259f     runtime/pprof.writeRuntimeProfile+0x15f         /usr/local/go/src/runtime/pprof/pprof.go:731
+#       0x10499230f     runtime/pprof.writeGoroutine+0x4f               /usr/local/go/src/runtime/pprof/pprof.go:683
+#       0x10498f94f     runtime/pprof.(*Profile).WriteTo+0x14f          /usr/local/go/src/runtime/pprof/pprof.go:330/Users/pratika.tripathi/Desktop/go/pprof/new/main.go:15
+
+
+#       0x10499a6eb     main.myFunction+0x9b                            /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:16
+
+1 @ 0x1049216c4 0x104948068 0x10499a778 0x1049212fc 0x10494b284
+#       0x104948067     time.Sleep+0x117        /usr/local/go/src/runtime/time.go:195
+#       0x10499a777     main.main+0x67          /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:28
+#       0x1049212fb     runtime.main+0x24b      /usr/local/go/src/runtime/proc.go:250
+
+1 @ 0x104947cd4 0x104968b78 0x10497573c 0x104975729 0x1049754b5 0x104976660 0x104976655 0x10497b134 0x10499a6cc 0x10499a681 0x10494b284
+#       0x104947cd3     syscall.syscall+0x53                    /usr/local/go/src/runtime/sys_darwin.go:23
+#       0x104968b77     syscall.write+0x47                      /usr/local/go/src/syscall/zsyscall_darwin_arm64.go:1653
+#       0x10497573b     syscall.Write+0x2ab                     /usr/local/go/src/syscall/syscall_unix.go:211
+#       0x104975728     internal/poll.ignoringEINTRIO+0x298     /usr/local/go/src/internal/poll/fd_unix.go:794
+#       0x1049754b4     internal/poll.(*FD).Write+0x24          /usr/local/go/src/internal/poll/fd_unix.go:383
+#       0x10497665f     os.(*File).write+0x5f                   /usr/local/go/src/os/file_posix.go:48
+#       0x104976654     os.(*File).Write+0x54                   /usr/local/go/src/os/file.go:176
+#       0x10497b133     fmt.Fprintf+0x83                        /usr/local/go/src/fmt/print.go:205
+#       0x10499a6cb     fmt.Printf+0x7b                         /usr/local/go/src/fmt/print.go:213
+#       0x10499a680     main.myFunction+0x30                    /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:15
+
+Goroutine profile for all running goroutines:
+goroutine profile: total 1
+1 @ 0x104917e4c 0x1049462e4 0x1049924f4 0x104992310 0x10498f950 0x10499a7f0 0x1049212fc 0x10494b284
+#       0x1049462e3     runtime/pprof.runtime_goroutineProfileWithLabels+0x23   /usr/local/go/src/runtime/mprof.go:846
+#       0x1049924f3     runtime/pprof.writeRuntimeProfile+0xb3                  /usr/local/go/src/runtime/pprof/pprof.go:723
+#       0x10499230f     runtime/pprof.writeGoroutine+0x4f                       /usr/local/go/src/runtime/pprof/pprof.go:683
+#       0x10498f94f     runtime/pprof.(*Profile).WriteTo+0x14f                  /usr/local/go/src/runtime/pprof/pprof.go:330
+#       0x10499a7ef     main.main+0xdf                                          /Users/pratika.tripathi/Desktop/go/pprof/new/main.go:35
+#       0x1049212fb     runtime.main+0x24b                                      /usr/local/go/src/runtime/proc.go:250
